@@ -1,7 +1,13 @@
 <template>
+    <div class="row">
 
-    <div>
-        Resource
+        <div class="col-12">
+            <h2>Github: </h2>
+            <a class="small mt-1" href="https://github.com/farhad1372/flow-analytics" target="_blank">FLOW Analytics Github</a>
+
+            <h2 class="mt-8">Shroomdk</h2>
+            <a class="small mt-1" href="https://sdk.flipsidecrypto.xyz/shroomdk">Shroomedk</a>
+        </div>
     </div>
 </template>
 
