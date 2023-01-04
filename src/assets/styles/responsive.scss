@@ -13,7 +13,9 @@ $sidebar-breakpoint: 1200px;
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
-
+.flex-warp {
+    flex-wrap: wrap !important;
+}
 @for $c from 1 through 12 {
     .col-#{$c} {
         flex: 0 0 percentage($c/ 12);

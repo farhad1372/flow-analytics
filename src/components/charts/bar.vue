@@ -43,7 +43,7 @@
                 </div>
             </template>
             <template #text>
-                <div class="mt-4">
+                <div class="mt-4 chart-container">
                     <Bar :options="chartOptions" :data="barChartData" />
                 </div>
             </template>
@@ -137,8 +137,11 @@ export default {
         return {
             sqlDialog: false,
             namespace: "BarChart",
+
             chartOptions: {
                 responsive: true,
+                maintainAspectRatio: false,
+
                 interaction: {
                     intersect: false,
                 },

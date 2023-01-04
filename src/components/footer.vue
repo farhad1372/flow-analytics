@@ -1,5 +1,5 @@
 <template>
-    <div class="border-top next-prev-pages mt-16 pt-6 d-flex flex-warp justify-space-between">
+    <div class="border-top next-prev-pages flex-warp mt-16 pt-6 d-flex flex-warp justify-space-between">
 
         <!-- prev link  -->
         <span style="">
@@ -60,7 +60,7 @@ a {
     transition: 0.3s ease;
     min-width: 300px;
     max-width: 45% !important;
-
+    margin-bottom: 10px !important;
     &.previous {
         text-align: left;
     }

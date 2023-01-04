@@ -44,7 +44,7 @@
                 </div>
             </template>
             <template #text>
-                <div class="mt-4">
+                <div class="mt-4 chart-container ">
                     <LineChartGenerator :options="chartOptions" :data="lineChartData" :chart-id="chartId"
                         :dataset-id-key="datasetIdKey" :plugins="plugins" :css-classes="cssClasses" :styles="styles"
                         :width="width" :height="height" />
@@ -158,6 +158,8 @@ export default {
 
             chartOptions: {
                 responsive: true,
+                maintainAspectRatio: false,
+
                 // parsing: {
                 //     xAxisKey: this.axis.x,
                 //     yAxisKey: this.axis.y
