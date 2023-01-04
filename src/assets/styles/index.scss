@@ -343,3 +343,22 @@ i {
     font-weight: 500 !important;
     font-size: 0.9rem !important;
 }
+
+
+@media screen and (max-width: 576px) {
+    .chart-container {
+        height: 440px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .chart-container {
+        height: 590px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .chart-container {
+        height: 650px;
+    }
+}

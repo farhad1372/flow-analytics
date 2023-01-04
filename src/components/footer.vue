@@ -1,9 +1,9 @@
 <template>
-    <div class="border-top next-prev-pages mt-16 pt-6 d-flex justify-space-between">
+    <div class="border-top next-prev-pages mt-16 pt-6 d-flex flex-warp justify-space-between">
 
         <!-- prev link  -->
-        <span>
-            <router-link v-if="$route.meta.prev" :to="{ name: $route.meta.prev.link }" class=" previous">
+        <span style="">
+            <router-link v-if="$route.meta.prev" :to="{ name: $route.meta.prev.link }" class=" previous py-5 px-4 px-md-8 px-lg-10">
                 <span>
                     <svg class="mr-1" width="10" height="10" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -19,8 +19,8 @@
 
 
         <!-- next link  -->
-        <span>
-            <router-link v-if="$route.meta.next" :to="{ name: $route.meta.next.link }" class="next">
+        <span style="">
+            <router-link v-if="$route.meta.next" :to="{ name: $route.meta.next.link }" class="next py-5 px-4 px-md-8 px-lg-10">
                 <span>
                     <span class="primary-text fw-500">Next</span>
                     <svg class="ml-1" width="10" height="10" viewBox="0 0 24 24" fill="none"
@@ -59,7 +59,7 @@ a {
     border-radius: 10px;
     transition: 0.3s ease;
     min-width: 300px;
-    padding: 20px 40px;
+    max-width: 45% !important;
 
     &.previous {
         text-align: left;

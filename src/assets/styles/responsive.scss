@@ -1,9 +1,15 @@
-// variables 
-$breakPoints : ("sm" : 576, "md" : 768, "lg" : 992, "xl" : 1200, "xxl" : 1900);
-$br : ("sm", "md", "lg", "xl", "xxl");
-$containers-size : 20px 30px 50px 80px 120px;
+// variables
+$breakPoints: (
+    "sm": 576,
+    "md": 768,
+    "lg": 992,
+    "xl": 1200,
+    "xxl": 1900,
+);
+$br: ("sm", "md", "lg", "xl", "xxl");
+$containers-size: 20px 30px 50px 80px 120px;
 $heading-step: 0.05;
-$sidebar-breakpoint : 1200px;
+$sidebar-breakpoint: 1200px;
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
@@ -69,10 +75,7 @@ $sidebar-breakpoint : 1200px;
         margin-top: #{$i * 4}px !important;
         margin-bottom: #{$i * 4}px !important;
     }
-
-
 }
-
 
 .p-0 {
     padding: 0 !important;
@@ -90,7 +93,7 @@ h2,
 
 h3,
 .h3 {
-    font-size: 1rem !important
+    font-size: 1rem !important;
 }
 
 h4,
@@ -130,7 +133,7 @@ h6,
 
 .w-100 {
     width: 100% !important;
-    max-width: 100% !important
+    max-width: 100% !important;
 }
 
 .row {
@@ -142,6 +145,7 @@ h6,
 
 .container {
     width: 100%;
+    max-width: calc(100% - 40px);
     padding: 12px;
     margin-right: auto;
     margin-left: auto;
@@ -149,10 +153,8 @@ h6,
 
 // $breakPointIndex : length($list: $breakPoints);
 
-@each $name,
-$size in $breakPoints {
+@each $name, $size in $breakPoints {
     @media screen and (min-width : #{$size}px) {
-
         .p-#{$name}-0 {
             padding: 0 !important;
         }
@@ -209,40 +211,45 @@ $size in $breakPoints {
             .pl-#{$name}-#{$i} {
                 padding-left: #{$i * 4}px !important;
             }
-
         }
 
-        $breakPointIndex : index($list: $br, $value: $name );
-        $sidebarIndex : index($list: $br, $value: $sidebar-breakpoint );
+        $breakPointIndex: index(
+            $list: $br,
+            $value: $name,
+        );
+        $sidebarIndex: index(
+            $list: $br,
+            $value: $sidebar-breakpoint,
+        );
 
         h1,
         .h1 {
-            font-size: #{ 1.3 +  $breakPointIndex * $heading-step }rem !important;
+            font-size: #{1.3 + $breakPointIndex * $heading-step}rem !important;
         }
 
         h2,
         .h2 {
-            font-size: #{ 1.05 +  $breakPointIndex * $heading-step }rem !important;
+            font-size: #{1.05 + $breakPointIndex * $heading-step}rem !important;
         }
 
         h3,
         .h3 {
-            font-size: #{ 1 +  $breakPointIndex * $heading-step }rem !important;
+            font-size: #{1 + $breakPointIndex * $heading-step}rem !important;
         }
 
         h4,
         .h4 {
-            font-size: #{ 0.95 +  $breakPointIndex * $heading-step }rem !important;
+            font-size: #{0.95 + $breakPointIndex * $heading-step}rem !important;
         }
 
         h5,
         .h5 {
-            font-size: #{ 0.92 +  $breakPointIndex * $heading-step }rem !important;
+            font-size: #{0.92 + $breakPointIndex * $heading-step}rem !important;
         }
 
         h6,
         .h6 {
-            font-size: #{ 0.9 +  $breakPointIndex * $heading-step }rem !important;
+            font-size: #{0.9 + $breakPointIndex * $heading-step}rem !important;
         }
 
         .d-#{$name}-done {
@@ -271,12 +278,7 @@ $size in $breakPoints {
             padding: 0 !important;
         }
 
-
-
-
         // $container-step : #{$container-step + 10};
-
-
 
         @for $c from 1 through 12 {
             .col-#{$name}-#{$c} {
@@ -293,10 +295,7 @@ $size in $breakPoints {
     display: none;
 }
 
-@media screen and (max-width : $sidebar-breakpoint ) {
-
-
-
+@media screen and (max-width: $sidebar-breakpoint) {
     .vs-navbar-content {
         width: 100% !important;
         right: 0 !important;
@@ -307,8 +306,6 @@ $size in $breakPoints {
         .vs-sidebar-conten {
             width: 250px !important;
         }
-
-
     }
 
     #page-wrapper.page-collapsed {
@@ -316,8 +313,6 @@ $size in $breakPoints {
             -webkit-transform: translate(-110%) !important;
             transform: translate(-110%) !important;
         }
-
-
     }
 
     #page-wrapper:not(.page-collapsed) {
@@ -326,7 +321,6 @@ $size in $breakPoints {
             transform: translate(0) !important;
 
             // background-color: blue !important
-
         }
 
         .overlay {
@@ -350,9 +344,6 @@ $size in $breakPoints {
         margin-left: 0 !important;
     }
 }
-
-
-
 
 // Small devices (landscape phones, 576px and up)
 // @media (min-width: 576px) {
